@@ -1,0 +1,81 @@
+== 화면 녹화 ==
+ obs 설치
+ 그래픽 확인
+  1. 시작 아이콘을 클릭합니다.
+  2. "Run"(따옴표 제외)을 입력하고 Enter 키를 누릅니다.
+  3. 실행 창이 열립니다. 해당 창에서 "dxdiag"(따옴표 제외)를 입력하고 확인을 클릭합니.
+     보고서가 생성되는 동안 약간의 지연이 있을 수 있습니다.
+  4. 디스플레이탭 선택
+  5. 설정확인
+  6. nvidia 다운로드 페이지에서 설치
+  7. nvidia로 영상 내보낼거 아니면 
+     설정 바꾸기
+
+
+== git ==
+1. git 실습
+  - git_study 폴더 안에 ex01 폴더 생성
+  ** ex01폴더의 내용을 git으로 관리하겠습니다*****
+
+2. ex01 폴더로 이동
+
+3. ex01 폴더에서 마우스 우클릭
+   -> git bash here 클릭
+
+4. git 환경설정
+  1) $ git config --global user.name "siwoo"
+  2) $ git config --global user.email "son125801@gmail.com"
+  3) $ git config --global init.defaultbranch main
+        --> git init 를 통해 로컬에서 생성하면 처음 default branch는 'master'로 된다.
+             default branch를 'main'으로 바꾸는것이다.
+5. git으로 관리하게 하기
+  $git init
+   -> git bash의 프롬프트에 (main)이 추가된 것을 볼 수 있음.
+   -> 폴더의 메뉴 중 [보기]를 클릭하여 [숨김항목]이 체크되어 있으면, [.git ] 폴더를 볼 수 있음.
+   -> 만약 ex01 폴더를 git 관리에서 제외하고 싶다면, [.git]폴더를 삭제하면 됨.
+
+6. git 환경설정한 결과 목록 확인
+  git config --list
+
+7. git 작업관리
+  작업->상태 확인 -> 임시저장->상태 확인 -> 영구저장->상태 확인->로그 확인
+
+  상태확인: git stauts 
+      -> 현재까지 작업 내용 확인 가능
+  임시저장 : add . , add [특정파일명 확장자까지]
+  영구저장 : git commit -[옵션]
+      -> 옵션이 m(message)인경우 git commit -m "커밋 메세지"
+  로그보기 : git log
+      -> 결과가 화면에 넘칠때 enter로 다음 내용 확인 가능
+      -> 빠져나오고 싶으면 'quit'의 약자인 'q'입력
+ 이전 내용 복구 : git reset --hard 로그 넘버
+ 브랜치 목록확인 :git branch 
+      ->현재 사용중인 branch 앞에는 "*"로 표시되어 있음
+      ->특정기능을 구현할때 사용하는 브랜치 : topic or fench
+ 브랜치 생성 :git branch 생성할 프랜치명      
+       -> git branch dev          dev라는 브랜치가 생김
+       
+ 사용할 브랜치 변경 : git checkout 사용할 브랜치명 
+       -> git checkout dev       dev 브랜치를 사용
+       -> dev 브랜치로 checkout 한것.
+        1) dev 브랜치로 체크아웃하세요
+           git checkout dev
+        2) insert_topic 브랜치로 체크아웃하세요
+           git checkout insert_topic
+
+
+== 리눅스 == 
+1. 키 설정 
+ 명령어 ctrl +c  : ctrl +insert 키
+ 명령어 ctrl +p  : shift +insert 키
+ 화면 초기화 : clear , ctrl + L
+ 사용했던 명령어 확인 : history
+ 내용없는 파일 만들기 : touch 파일명.확장자
+ 입력한 내용을 그대로 화면/파일에 전송하는 기능 : echo "문자"
+   -> 파일명 미입력시 화면에 출력
+   ->  echo "문자" > 파일명.확장자                해당 파일에 덮어쓰기. 기존의 데이터는 사라짐
+   -> echo "문자" >> 파일명.확장자               해당 파일에 추가. 기존의 데이터는 사라짐
+ 파일 내용 확인 : cat 파일명.확장자
+   -> cat insert.txt > test.txt                        덮어쓰기. "insert.txt" 파일의 내용을 "test.txt"파일에 전송   
+   -> cat insert.txt > test.txt                        추가. "insert.txt" 파일의 내용을 "test.txt"파일에 추가             
+ 
