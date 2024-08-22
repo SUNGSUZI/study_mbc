@@ -1,0 +1,56 @@
+github 연동시 revert를 사용하고 연동 전에는 reset을 사용 권장.
+
+github의 내 브랜치에 push 할 경우 주의사항이 있다
+-> push 동작 시 github는 작업내용 수가 같을 경우 작업내용일 일치한지 확인을 한다.
+-> 다른경우는 충돌을 발생한다.
+-> 이를 예방하기 위해 로컬의 dev 브랜치를 github의 dev 브랜치에 현재 작업내용을 로컬의 dev브랜치에 pull 해줘야한다.
+-> 그 이후 로컬dev와 내 작업 topic 브랜치를 merge 해줘야한다. (하위에서 윗 브랜치의 내용을 가져오는 거니 rebase명령어 사용.)
+-> 그 후 github에 내가 작업한 topic 브랜치를 push 한다.
+-> 내 topic의 브랜치 작업내용을 github에서도 확인이 가능하다.
+
+github dev브랜치에는 해당 topic중 가장 최근의 것을 올리는것을 권장.
+
+github에서 pull과 push를 할때 상위 브랜치의 커밋개수가 하위 브랜치의 커밋개순보다 작으면 충돌이 생긴다.
+
+dev 브랜치로 체크아웃
+insert/topic 브랜치를 삭제하세요.
+ 
+select/topic 브랜치를 생성하고 체크아웃.
+select1.txt파일생성
+select2.txt파일 생성
+ add, commit
+
+작업한 내용을 팀장이 dev로 merge하는 법 
+-> github 팀장계정으로 접속
+-> 프로젝트 선택 
+-> code 탭 선택
+-> 브랜치 'dev' 선택
+->pull requests 탭 선택 
+-> pull할 내용을 선택
+-> base branch를 'dev'로 선택 
+-> compare branch를 'select/topic'으로 선택
+-> 
+
+push 하기 전에 해야할일
+그런 다음 push 
+
+
+
+
+pr요청
+
+-> 
+
+
+
+github에서 레파지토리를 생성하고, clone을 이용해서 local 다운로드 했음 
+clone을 이용해서 ...local 다운로드했음.
+
+clone =깃 허브의 레파지토리와 local의 디렉토리를 연결해주고 local에 깃허브의 데이터를 다운로드 해주는 역할.
+
+로컬(pc)에서 디렉토리를 생성하고 
+-> 나중에 github
+
+
+
+ 
